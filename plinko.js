@@ -4,15 +4,13 @@ class Plinko{
         isStatic:true
     }
     this.body = Bodies.circle(x,y,14,options);
-    this.x= x;
-    this.y = y;
-
+    this.radius = this.body.circleRadius;
     World.add(world,this.body);
     }
     display(){
       ellipseMode(CENTER);
       fill("red");
-      ellipse(this.x,this.y,14);
+      ellipse(this.body.position.x,this.body.position.y,this.radius,this.radius);
 
 
     }
